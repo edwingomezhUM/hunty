@@ -10,8 +10,7 @@ class MongoConnection:
     def __init__(self):
 
         try:
-            # self.client = MongoClient(os.environ.get("MONGO_CONNECTION"), retryWrites=False)
-            self.client = MongoClient("mongodb://datalab:Datalab2022*@40.87.47.53:27017/", retryWrites=False)
+            self.client = MongoClient(os.environ.get("MONGO_CONNECTION"), retryWrites=False)
             self.db = self.client['prueba_whatsapp']
         
         except Exception as e:
