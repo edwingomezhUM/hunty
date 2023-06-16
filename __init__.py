@@ -76,23 +76,5 @@ def webhook_whatsapp():
             return jsonify({"status": "success"}, 200)
 
 
-# @app.route("/messages/", methods=["POST", "GET"])
-# def enviar():
-
-#     if request.method == "GET":
-
-#         print("get")
-
-#     elif request.method == "POST":
-
-#         data = request.get_json()
-
-#         insert = update_chat()
-
-#         insertChat = insert.update_data(data)
-
-#         return insertChat
-
-# INICIAMSO FLASK
 if __name__ == "__main__":
     app.run(debug=True)
