@@ -9,12 +9,12 @@ class MyTest(TestCase):
         app.config['TESTING'] = True
         return app
 
-    def test_hello_world(self):
-        response = self.client.get("/messages?")
+    def test_messages(self):
+        response = self.client.get("/messages/")
         
+        expected_json = ''
 
-
-        self.assertDictContainsSubset(response.data, b'Hello, World!')
+        self.assertDictContainsSubset(expected_json, b'Hello, World!')
 
 if __name__ == '__main__':
     unittest.main()
